@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Songs</title>
+    <style>
+      /* Styling */
+      body {
+        background-color: #f1f1f1;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      
+      h1 {
+        font-size: 3rem;
+        margin-top: 2rem;
+      }
+      
+      .song-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 3rem;
+      }
+      
+      .song-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin: 1.5rem;
+        max-width: 300px;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      .song-card:hover {
+        transform: translateY(-10px);
+      }
+      
+      .song-image {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+      }
+      
+      .song-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 1rem;
+      }
+      
+      .song-artist {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+      
+      .spotify-button {
+        background-color: #1db954;
+        border-radius: 25px;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 1rem;
+        padding: 0.5rem 2rem;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      .spotify-button:hover {
+        background-color: #0f784e;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Songs</h1>
+    <div class="song-container">
+      {% for x in range(length) %}
+      <div class="song-card">
+        <img class="song-image" src="{{songs_images[x]}}" alt="Song 1 Cover">
+        <div class="song-details">
+          <div class="song-title">{{songs_names[x]}}</div>
+          <a class="spotify-button" href="https://open.spotify.com/playlist/add/PLAYLIST_ID?uri=SPOTIFY_SONG_URI">Add to Queue</a>
+        </div>
+      </div>
+      {% endfor %}
+      <!-- Add more song cards as needed -->
+    </div>
+  </body>
+</html>

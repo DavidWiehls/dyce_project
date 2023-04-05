@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dyce - Pre-Save My Songs</title>
+	<style>
+		body {
+			background-color: #333333;
+			color: #FFFFFF;
+			font-family: Arial, sans-serif;
+			font-size: 18px;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.message {
+			text-align: center;
+			margin-bottom: 50px;
+			animation: slide-in 1s ease-out;
+		}
+
+		.logo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			bottom: 0;
+			animation: slide-up 1s ease-out;
+		}
+
+		@keyframes slide-in {
+			from {
+				transform: translateY(-50px);
+				opacity: 0;
+			}
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes slide-up {
+			from {
+				transform: translateY(50px);
+				opacity: 0;
+			}
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="message">
+			<img src="https://i.scdn.co/image/ab6761610000e5eb9720617415aee4a156c04d25" alt="Dyce - Pre-Save My Songs" >
+			<p>Thank you for supporting my music! Click the button below to pre-save my songs on Spotify:</p>
+		</div>
+		<div class="logo">
+			<a href="http://dyce-36wcmmtu3q-ey.a.run.app" target="_blank"><img src="https://georgiauk.com/presave/img/presave.png" alt="Pre-Save on Spotify"></a>
+		</div>
+	</div>
+</body>
+</html>
