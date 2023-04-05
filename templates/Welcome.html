@@ -37,6 +37,13 @@
 			animation: slide-up 1s ease-out;
 		}
 
+		.checkbox-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 100px;
+		}
+
 		@keyframes slide-in {
 			from {
 				transform: translateY(-50px);
@@ -59,6 +66,14 @@
 			}
 		}
 	</style>
+	<script>
+		function toggleButton() {
+			const checkbox = document.getElementById('consentCheckbox');
+			const button = document.querySelector('.logo a');
+			button.style.pointerEvents = checkbox.checked ? 'auto' : 'none';
+			button.style.opacity = checkbox.checked ? '1' : '0.5';
+		}
+	</script>
 </head>
 <body>
 	<div class="container">
@@ -66,8 +81,12 @@
 			<img src="https://i.scdn.co/image/ab6761610000e5eb9720617415aee4a156c04d25" alt="Dyce - Pre-Save My Songs" >
 			<p>Thank you for supporting my music! Click the button below to pre-save my songs on Spotify:</p>
 		</div>
+		<div class="checkbox-container">
+			<input type="checkbox" id="consentCheckbox" onchange="toggleButton()">
+			<label for="consentCheckbox">I agree to share my email address and location</label>
+		</div>
 		<div class="logo">
-			<a href="http://dyce-36wcmmtu3q-ey.a.run.app" target="_blank"><img src="https://georgiauk.com/presave/img/presave.png" alt="Pre-Save on Spotify"></a>
+			<a href="http://dyce-36wcmmtu3q-ey.a.run.app" target="_blank" style="pointer-events: none; opacity: 0.5;"><img src="https://georgiauk.com/presave/img/presave.png" alt="Pre-Save on Spotify"></a>
 		</div>
 	</div>
 </body>
